@@ -149,7 +149,6 @@ a{
 
 #instagram a img{
   width: 27%;
-  display: block;
 }
 
 @media screen and (max-width: 900px) {
@@ -161,6 +160,7 @@ a{
 @media screen and (max-width: 490px) {
   #instagram a img{
     width: 100%;
+    display: block;
   }
 }
 
