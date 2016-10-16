@@ -78,6 +78,7 @@ a{
   border-right: 0.5em solid black;
   border-bottom: 1px solid black;
   display: inline-flex;
+  z-index: 1000;
 }
 
 .navbar-left{
@@ -124,14 +125,33 @@ a{
 
 #instagram{
   text-align: center;
+  -webkit-animation-duration: 1.3s;
+  -webkit-animation-delay: 1s;
 }
 
 #instagram a{
   padding: 0.5em;
 }
 
+#instagram a:hover{
+  opacity: 1;
+}
+
 #instagram a img{
   width: 27%;
+
+}
+
+@media screen and (max-width: 900px) {
+  #instagram a img{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  #instagram a img{
+    width: 90%;
+  }
 }
 
 /** FOOTER **/

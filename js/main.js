@@ -1,3 +1,5 @@
+//INSTAFEED
+
 var feed = new Instafeed({
 		get: 'user',
 		userId: 4034986418,
@@ -15,6 +17,8 @@ var feed = new Instafeed({
 		}
 });
 feed.run();
+
+//NAVBAR
 
 $(document).ready(function(){
 
@@ -36,3 +40,7 @@ $(document).ready(function(){
 	});
 
 });
+
+//ANIMATE
+
+$('#instagram').addClass('animated fadeIn');
