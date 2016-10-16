@@ -91,6 +91,7 @@ a{
   height: auto;
   margin-left: 1em;
   padding: 1em;
+  display: block;
 }
 
 .navbar-center{
@@ -135,7 +136,7 @@ a{
 #instagram{
   text-align: center;
   -webkit-animation-duration: 1.3s;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-delay: 1.5s;
 }
 
 #instagram a{
@@ -148,7 +149,7 @@ a{
 
 #instagram a img{
   width: 27%;
-
+  display: block;
 }
 
 @media screen and (max-width: 900px) {
@@ -159,7 +160,7 @@ a{
 
 @media screen and (max-width: 490px) {
   #instagram a img{
-    width: 90%;
+    width: 100%;
   }
 }
 
