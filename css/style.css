@@ -65,6 +65,61 @@ a{
   height: auto;
 }
 
+/** NAVBAR **/
+
+.navbar{
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  border-left: 0.5em solid black;
+  border-right: 0.5em solid black;
+  border-bottom: 1px solid black;
+  display: inline-flex;
+}
+
+.navbar-left{
+  float: left;
+  width: 33%;
+}
+
+.navbar-left img{
+  width: 40px;
+  height: auto;
+  margin-left: 2em;
+  padding: 1em;
+}
+
+.navbar-center{
+  float: left;
+  width: 33%;
+}
+
+.navbar-right{
+  float: right;
+  width: 33%;
+  text-align: right;
+}
+
+.navbar-right a i{
+  color: #686767;
+  font-size: 24px;
+  padding: 0.5em;
+  padding-top: 1em;
+  display: inline-block;
+}
+
+.navbar-right a:hover i{
+  color: black;
+  transition-duration: 1s
+}
+
+.navbar-right a:nth-child(2){
+  margin-right: 2em;
+}
+
 /** MAIN **/
 
 #instagram{
@@ -94,6 +149,7 @@ a{
 .site-footer a i{
   color: #686767;
   font-size: 24px;
+  padding: 10px;
 }
 
 .site-footer a:hover i{
