@@ -89,7 +89,7 @@ a{
 .navbar-left img{
   width: 40px;
   height: auto;
-  margin-left: 2em;
+  margin-left: 1em;
   padding: 1em;
 }
 
@@ -118,7 +118,7 @@ a{
 }
 
 .navbar-right a:nth-child(2){
-  margin-right: 2em;
+  margin-right: 1em;
 }
 
 /** MAIN **/
