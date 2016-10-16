@@ -1,0 +1,102 @@
+/** INCLUDES **/
+
+@font-face {
+  font-family: futura-pt;
+  src: url("../font/FuturaPTMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: mont-serra;
+  src: url("../font/Montserrat-Light.otf") format("opentype");
+}
+
+/** GENERAL **/
+
+html{
+  background-color: black;
+}
+
+body{
+  font-family: 'futura-pt', sans-serif;
+  margin: 0.5em;
+  background-color: white;
+  padding: 2em;
+}
+
+h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+h2{
+  font-family: 'mont-serra', sans-serif;
+  text-align: center;
+  font-weight: lighter;
+  color: #686767;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+p{
+  font-family: 'mont-serra', sans-serif;
+}
+
+hr{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/** HEADER **/
+
+.img-header{
+  text-align: center;
+}
+
+.img-header img{
+  width: 55px;
+  height: auto;
+}
+
+/** MAIN **/
+
+#instagram{
+  text-align: center;
+}
+
+#instagram a{
+  padding: 0.5em;
+}
+
+#instagram a img{
+  width: 27%;
+}
+
+/** FOOTER **/
+
+.site-footer{
+  text-align: center;
+}
+
+.site-footer p{
+  font-weight: lighter;
+  font-size: 12px;
+  color: #686767;
+}
+
+.site-footer a i{
+  color: #686767;
+  font-size: 24px;
+}
+
+.site-footer a:hover i{
+  color: black;
+  transition-duration: 1s
+}

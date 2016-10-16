@@ -1,0 +1,21 @@
+{
+  "name": "DemainPeutEtre",
+  "homepage": "https://github.com/sylvaindev/demainpeutetre",
+  "authors": [
+    "Sylvain Martin <sylvainmdev@gmail.com>"
+  ],
+  "description": "Mais aujourd'hui ?",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "simple-line-icons": "^2.4.1",
+    "instafeed.js": "^1.4.1"
+  }
+}
