@@ -2,7 +2,7 @@
 
  https://demainpeutetre.github.io/ 
 
-C'est un site ou j'expose mes photographies
+Est un site ou j'expose mes photographies
 
 ##v1
 
