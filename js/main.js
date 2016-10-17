@@ -7,7 +7,7 @@ var feed = new Instafeed({
 		accessToken: '4034986418.1677ed0.a4168a68457c4a62a6ebae8d77340ace',
 		target: 'instagram',
 		resolution: 'standard_resolution',
-		template: '<a class="fancybox" rel="gallery1" href="{{model.images.standard_resolution.url}}"><img class="instagram-image" src="{{image}}" /></a>',
+		template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
 		after: function() {
 			var el = document.getElementById('instagram');
 			if (el.classList)
@@ -44,12 +44,3 @@ $(document).ready(function(){
 //ANIMATE
 
 $('#instagram').addClass('animated fadeIn');
-
-//FANCYBOX
-
-$(document).ready(function() {
-		$(".fancybox").fancybox({
-			openEffect	: 'elastic',
-    	closeEffect	: 'elastic',
-		});
-	});

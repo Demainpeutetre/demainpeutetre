@@ -170,28 +170,17 @@ a{
   width: 27%;
 }
 
-/** LIGHTBOX **/
-
-.fancybox-close{
-  background-image: url('../img/lightbox/close.png');
-  background-repeat:no-repeat;
-  top: -22px;
-  right: -26px;
+@media screen and (max-width: 900px) {
+  #instagram a img{
+    width: 40%;
+  }
 }
 
-.fancybox-inner{
-  width: 100% !important;
-  height: auto !important;
-}
-
-.fancybox-wrap{
-  border: 0.5em solid black;
-  border-radius: 5px;
-}
-
-.fancybox-skin{
-  background: white;
-  padding: 10px !important;
+@media screen and (max-width: 490px) {
+  #instagram a img{
+    width: 100%;
+    display: block;
+  }
 }
 
 /** FOOTER **/
@@ -215,25 +204,4 @@ a{
 .site-footer a:hover i{
   color: black;
   transition-duration: 1s
-}
-
-/** MEDIA QUERIES **/
-
-@media screen and (max-width: 800px){
-  #instagram:hover img{
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  #instagram a img{
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 490px) {
-  #instagram a img{
-    width: 100%;
-    display: block;
-  }
 }
