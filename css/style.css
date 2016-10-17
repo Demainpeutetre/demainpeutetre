@@ -178,6 +178,7 @@ a{
   background-size: auto;
   top: -22px;
   right: -26px;
+  display: none;
 }
 
 .fancybox-inner{
