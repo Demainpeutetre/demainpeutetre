@@ -195,6 +195,11 @@ a{
   padding: 10px !important;
 }
 
+.fancybox-lock .fancybox-overlay {
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
 /** FOOTER **/
 
 .site-footer{
@@ -220,6 +225,13 @@ a{
 
 /** MEDIA QUERIES **/
 
+@media screen and (max-width: 700px){
+  body > div.fancybox-overlay.fancybox-overlay-fixed > div{
+    left: 12px !important;
+    right: 10px !important;
+  }
+}
+
 @media screen and (max-width: 800px){
   #instagram:hover img{
     opacity: 1;
@@ -237,4 +249,5 @@ a{
     width: 100%;
     display: block;
   }
+
 }
