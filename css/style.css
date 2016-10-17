@@ -175,6 +175,7 @@ a{
 .fancybox-close{
   background-image: url('../img/lightbox/close.png');
   background-repeat:no-repeat;
+  background-size: auto;
   top: -22px;
   right: -26px;
 }
