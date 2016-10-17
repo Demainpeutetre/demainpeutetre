@@ -6,7 +6,7 @@ C'est un site ou j'expose mes photographies
 
 ##v1
 
-- Skelette du site avec navbar, contenu et footer
+- Squelette du site avec navbar, contenu et footer
 
 ###Futur contenu
 
