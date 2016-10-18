@@ -360,6 +360,7 @@ body > div.fancybox-overlay.fancybox-overlay-fixed > div{
 
   aside p{
     font-size: 12px !important;
+    margin-bottom: 0px;
   }
 
   aside .contact a{
