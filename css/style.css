@@ -78,7 +78,7 @@ a{
   border-right: 0.5em solid black;
   border-bottom: 1px solid black;
   display: inline-flex;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .navbar-left{
@@ -101,7 +101,7 @@ a{
 
 .navbar-right{
   float: right;
-  width: 33%;
+  width: 50%;
   text-align: right;
 }
 
@@ -118,15 +118,31 @@ a{
   transition-duration: 1s
 }
 
-.navbar-right a:nth-child(2){
+.navbar-right a:nth-child(3){
   margin-right: 1em;
+}
+
+.navbar-center{
+  text-align: center;
+}
+
+.toggle-overlay i{
+  font-size: 2em;
+  color: #686767;
+  padding: 0.6em;
+  display: block;
+}
+
+.toggle-overlay:hover i{
+  color: black;
+  transition-duration: 1s
 }
 
 @media screen and (max-width: 490px) {
   .navbar-left img{
     margin-left: 0em;
   }
-  .navbar-right a:nth-child(2){
+  .navbar-right a:nth-child(3){
     margin-right: 0.5em;
   }
 }
@@ -171,10 +187,100 @@ a{
   width: 27%;
 }
 
+aside {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease;
+  z-index: 2;
+  padding: 13%;
+  overflow: auto;
+}
+.open {
+  opacity: 0.9;
+  visibility: visible;
+  z-index: 1000;
+}
+.close {
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  color: white;
+  z-index: 3;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+span.profil,
+span.profil:before,
+span.profil:after {
+  border-radius: 4px;
+  height: 5px;
+  width: 35px;
+  background: black;
+  position: absolute;
+  display: block;
+  content: '';
+}
+span.profil {
+  background: transparent;
+}
+span.profil:before {
+  transform: rotate(45deg);
+}
+span.profil:after {
+  transform: rotate(-45deg);
+}
+}
+
+.outer-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+
+aside h2{
+  font-size: 36px;
+  font-family: futura-pt;
+  text-transform: uppercase;
+  color: black;
+}
+
+aside p{
+  font-size: 18px;
+  font-family: mont-serra;
+  color: black;
+  text-align-last: justify;
+  letter-spacing: 1px;
+  line-height: 1.7em;
+}
+
+aside .contact{
+  text-align: center;
+}
+
+aside .contact a{
+  color: black;
+  font-size: 35px;
+  padding-top: 1em;
+  display: block;
+}
+
+aside .contact i:hover{
+  color: #686767;
+  transition-duration: 1s;
+}
+
 /** LIGHTBOX **/
 
 .fancybox-overlay{
-      background: rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.6) !important;
 }
 
 .fancybox-close{
@@ -196,8 +302,8 @@ a{
 }
 
 .fancybox-lock .fancybox-overlay {
-    overflow: hidden;
-    overflow-y: hidden;
+  overflow: hidden;
+  overflow-y: hidden;
 }
 
 body > div.fancybox-overlay.fancybox-overlay-fixed > div{

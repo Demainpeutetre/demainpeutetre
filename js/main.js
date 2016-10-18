@@ -53,3 +53,13 @@ $(document).ready(function() {
     	closeEffect	: 'elastic',
 		});
 	});
+
+//PROFILE
+
+(function($) {
+  $(function() {
+    $('.toggle-overlay').click(function() {
+      $('aside').toggleClass('open');
+    });
+  });
+})(jQuery);
