@@ -193,7 +193,6 @@ aside {
   transition: all .5s ease;
   z-index: 2;
   padding: 13%;
-  overflow: auto;
 }
 .open {
   opacity: 0.9;
@@ -356,11 +355,15 @@ body > div.fancybox-overlay.fancybox-overlay-fixed > div{
   }
 
   aside h2{
-    font-size: 30px !important;
+    font-size: 25px !important;
   }
 
   aside p{
-    font-size: 13px !important;
+    font-size: 12px !important;
+  }
+
+  aside .contact a{
+    padding: 0em;
   }
 
 }
