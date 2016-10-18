@@ -172,12 +172,11 @@ a{
 
 /** LIGHTBOX **/
 
+.fancybox-overlay{
+      background: rgba(255, 255, 255, 0.6) !important;
+}
+
 .fancybox-close{
-  background-image: url('../img/lightbox/close.png');
-  background-repeat:no-repeat;
-  background-size: auto;
-  top: -22px;
-  right: -26px;
   display: none;
 }
 
@@ -187,8 +186,7 @@ a{
 }
 
 .fancybox-wrap{
-  border: 0.5em solid black;
-  border-radius: 5px;
+  border: 0;
 }
 
 .fancybox-skin{
@@ -199,6 +197,10 @@ a{
 .fancybox-lock .fancybox-overlay {
     overflow: hidden;
     overflow-y: hidden;
+}
+
+body > div.fancybox-overlay.fancybox-overlay-fixed > div{
+  width: auto !important;
 }
 
 /** FOOTER **/
