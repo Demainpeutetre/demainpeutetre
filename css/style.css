@@ -83,7 +83,7 @@ a{
 
 .navbar-left{
   float: left;
-  width: 33%;
+  width: 50%;
 }
 
 .navbar-left img{
@@ -96,8 +96,8 @@ a{
 
 .navbar-right{
   text-align: right;
-  right: 0;
-  position: absolute;
+  float: right;
+  width: 50%;
 }
 
 .navbar-right a i{
@@ -105,7 +105,7 @@ a{
   font-size: 24px;
   padding: 0.5em;
   padding-top: 1em;
-  display: inline-flex;
+  display: inline-block;
 }
 
 .navbar-right a:hover i{
