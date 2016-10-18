@@ -355,4 +355,12 @@ body > div.fancybox-overlay.fancybox-overlay-fixed > div{
     display: block;
   }
 
+  aside h2{
+    font-size: 30px !important;
+  }
+
+  aside p{
+    font-size: 13px !important;
+  }
+
 }
