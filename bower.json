@@ -16,6 +16,6 @@
   ],
   "dependencies": {
     "simple-line-icons": "^2.4.1",
-    "instafeed.js": "^1.4.1"
+    "instafeed.js": "^1.4.1",
   }
 }
