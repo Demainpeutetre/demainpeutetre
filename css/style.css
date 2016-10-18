@@ -94,15 +94,11 @@ a{
   display: block;
 }
 
-.navbar-center{
-  float: left;
-  width: 17%;
-}
-
 .navbar-right{
-  float: right;
   width: 50%;
   text-align: right;
+  right: 0;
+  position: absolute;
 }
 
 .navbar-right a i{
