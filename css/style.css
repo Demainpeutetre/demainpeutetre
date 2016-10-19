@@ -198,6 +198,7 @@ aside {
   opacity: 0.9;
   visibility: visible;
   z-index: 1000;
+  width: 75%;
 }
 .close {
   position: fixed;
@@ -213,7 +214,7 @@ span.profil:before,
 span.profil:after {
   border-radius: 4px;
   height: 5px;
-  width: 35px;
+  width: 25px;
   background: black;
   position: absolute;
   display: block;
@@ -240,17 +241,17 @@ span.profil:after {
 }
 
 aside h2{
-  font-size: 36px;
+  font-size: 32px;
   font-family: futura-pt;
   text-transform: uppercase;
   color: black;
 }
 
 aside p{
-  font-size: 18px;
+  font-size: 16px;
   font-family: mont-serra;
   color: black;
-  text-align-last: justify;
+  text-align-last: center;
   letter-spacing: 1px;
   line-height: 1.7em;
 }
@@ -360,7 +361,7 @@ body > div.fancybox-overlay.fancybox-overlay-fixed > div{
 
   aside p{
     font-size: 12px !important;
-    margin-bottom: 0px;
+    margin-bottom:0px;
   }
 
   aside .contact a{
