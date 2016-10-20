@@ -6,6 +6,7 @@ var feed = new Instafeed({
 		clientId: 'c82f268229d34673b0b4c1d6a75222b0',
 		accessToken: '4034986418.1677ed0.a4168a68457c4a62a6ebae8d77340ace',
 		target: 'instagram',
+		limit: 60,
 		resolution: 'standard_resolution',
 		template: '<a class="fancybox" rel="gallery1" href="{{model.images.standard_resolution.url}}"><img class="instagram-image" src="{{image}}" /></a>',
 		after: function() {
