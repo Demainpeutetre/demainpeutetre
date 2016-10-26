@@ -14,9 +14,7 @@ var feed = new Instafeed({
 			$('#pagination').addClass('hidden');
 	},
 	success: function(data){
-		for(var i in data){
-			console.log(i + '->' + data);
-		}
+			console.log(data);
 	}
 });
 
