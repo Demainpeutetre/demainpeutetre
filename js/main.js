@@ -13,6 +13,11 @@ var feed = new Instafeed({
 		if (!this.hasNext())
 			$('#pagination').addClass('hidden');
 	},
+	success: function(data){
+		for(var i in data){
+			console.log(i + '->' + data);
+		}
+	}
 });
 
 // bind the load more button
