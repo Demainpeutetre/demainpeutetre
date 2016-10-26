@@ -1,25 +1,32 @@
 //update tags list from instafeed
 function updateTags() {
-    var html = '';
+
+    //make list
+    var html = '<li class="all">all</li>';
     for (var e in tags) {
         html = html + '<li>' + tags[e] + '</li>';
-     }
-    $('#tags').html(html);
-}
+    }
 
-//click on tag
-$('#tags li').on("click", function() {
-	alert('toto');
-    var c = $(this).html();
-    $('#instagram img').each(function () {
-        if (!$(this).hasClass(c)) {
-            $(this).hide();
-        }
-        else {
-            $(this).show();
-        }
+    //refresh list
+    $('#tags').html(html);
+
+    //click on tag
+    $('#tags li').on("click", function () {
+        var c = $(this).html();
+        $('#instagram img').each(function () {
+            if (!$(this).hasClass(c)) {
+                $(this).hide();
+            } else {
+                $(this).show();
+            }
+        });
     });
-});
+
+    //click on tag "all"
+    $('#tags li.all').on("click", function () {
+        $('#instagram img').show();
+    });
+}
 
 //result buffer
 var result = null;
@@ -38,13 +45,15 @@ var feed = new Instafeed({
     template: '<a class="fancybox" rel="gallery1" href="{{model.images.standard_resolution.url}}"><img class="instagram-image" src="{{image}}" /></a>',
     after: function () {
 
-        //set image classes with first tag
+			//set image classes with first tag
         for (var i in result.data) {
             if (result.data[i].tags.length) {
                 $('#instagram img').each(function (index) {
                     if (index == i) {
                         var tag = result.data[i].tags[0].substr(0);
-                        tags.push(tag);
+                        if (tags.indexOf(tag) == -1) {
+                            tags.push(tag);
+                        }
                         $(this).addClass(tag);
                     }
                 });
