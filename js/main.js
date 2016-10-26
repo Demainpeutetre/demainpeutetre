@@ -1,7 +1,5 @@
 //INSTAFEED
 
-var loadButton = $('#pagination');
-
 var feed = new Instafeed({
 	get: 'user',
 	userId: 4034986418,
@@ -13,12 +11,12 @@ var feed = new Instafeed({
 	after: function() {
 		// disable button if no more results to load
 		if (!this.hasNext())
-			loadButton.addClass('hidden');
+			$('#pagination').addClass('hidden');
 	},
 });
 
 // bind the load more button
-loadButton.addEventListener('click', function() {
+$('#paginaion').click(function() {
 	feed.next();
 });
 
