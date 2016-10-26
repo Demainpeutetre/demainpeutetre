@@ -13,9 +13,16 @@ var feed = new Instafeed({
 		if (!this.hasNext())
 			$('#pagination').addClass('hidden');
 	},
-	success: function(data){
-			console.log(data);
-	}
+	success: function(data) {
+        for(var i in data) {
+
+            if (data[i].tags.length) {
+                $('img.instagram-image').get(i).addClass(data[i].tags[0].substr(1));
+            }
+            console.log(i + ' -> ' + data[i]);
+
+        }
+    }
 });
 
 // bind the load more button
