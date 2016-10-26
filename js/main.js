@@ -21,7 +21,7 @@ var feed = new Instafeed({
 							console.log($('img.instagram-image').length);
 							console.log($('img.instagram-image'));
             }
-            console.log(i + ' -> ' + data[i]);
+            console.log(i + ' -> ' + result[i]);
 
         }
     }
