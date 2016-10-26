@@ -58,6 +58,14 @@ a{
   display: none;
 }
 
+ul{
+  padding-left: 0px;
+}
+
+ul li{
+  display: inline;
+}
+
 /** HEADER **/
 
 .img-header{
@@ -149,8 +157,28 @@ a{
 
 /** MAIN **/
 
+.nav-tags{
+  text-align: center;
+}
+
+.nav-tags ul li{
+  padding: 0.5%;
+  text-transform: uppercase;
+  font-family: 'mont-serra', sans-serif;
+  font-weight: lighter;
+  font-size: 10px;
+  color: #686767;
+  cursor: pointer;
+  padding-left: 0px;
+}
+
+.nav-tags ul li:hover{
+  text-decoration: underline;
+}
+
 #instagram{
   text-align: center;
+  padding-bottom: 3em;
   -webkit-animation-duration: 1.3s;
   -moz-animation-duration: 1.3s;
   -ms-animation-duration: 1.3s;
@@ -195,6 +223,7 @@ a{
   color: #686767;
   font-size: 12px;
   padding: 1em;
+  padding-top: 2em;
 }
 
 .loadmore a:hover{
@@ -349,25 +378,6 @@ body > div.fancybox-overlay.fancybox-overlay-fixed > div{
 
 /** MEDIA QUERIES **/
 
-@media screen and (max-width: 700px){
-  body > div.fancybox-overlay.fancybox-overlay-fixed > div{
-    left: 10px !important;
-    right: 10px !important;
-  }
-}
-
-@media screen and (max-width: 800px){
-  #instagram:hover img{
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  #instagram a img{
-    width: 40%;
-  }
-}
-
 @media screen and (max-width: 490px) {
   #instagram a img{
     width: 100%;
@@ -387,4 +397,29 @@ body > div.fancybox-overlay.fancybox-overlay-fixed > div{
     padding: 0em;
   }
 
+}
+
+@media screen and (max-width: 700px){
+  body > div.fancybox-overlay.fancybox-overlay-fixed > div{
+    left: 10px !important;
+    right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 800px){
+  #instagram:hover img{
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #instagram a img{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 967px){
+  #tags{
+    display: none;
+  }
 }
