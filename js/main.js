@@ -1,5 +1,7 @@
 //INSTAFEED
 
+var result = null;
+
 var feed = new Instafeed({
 	get: 'user',
 	userId: 4034986418,
@@ -9,22 +11,25 @@ var feed = new Instafeed({
 	resolution: 'standard_resolution',
 	template: '<a class="fancybox" rel="gallery1" href="{{model.images.standard_resolution.url}}"><img class="instagram-image" src="{{image}}" /></a>',
 	after: function() {
+
+		for(var i in result.data) {
+
+			if (result.data[i].tags.length) {
+				$('#instagram img').each(function(index) {
+					if (index == i) {
+						$(this).addClass(result.data[i].tags[0].substr(0));
+					}
+				});
+			}
+
+		}
 		// disable button if no more results to load
 		if (!this.hasNext())
-			$('#pagination').addClass('hidden');
+		$('#pagination').addClass('hidden');
 	},
-	success: function(result) {
-        for(var i in result.data) {
-
-            if (result.data[i].tags.length) {
-							//$('img.instagram-image')[i].addClass(result.data[i].tags[0].substr(1));
-							console.log($('img.instagram-image').length);
-							console.log($('img.instagram-image'));
-            }
-            console.log(i + ' -> ' + result[i]);
-
-        }
-    }
+	success: function(r) {
+		result = r;
+	}
 });
 
 // bind the load more button
