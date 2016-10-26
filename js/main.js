@@ -13,11 +13,11 @@ var feed = new Instafeed({
 		if (!this.hasNext())
 			$('#pagination').addClass('hidden');
 	},
-	success: function(data) {
-        for(var i in data) {
+	success: function(result) {
+        for(var i in result.data) {
 
-            if (data[i].tags.length) {
-                $('img.instagram-image').get(i).addClass(data[i].tags[0].substr(1));
+            if (result.data[i].tags.length) {
+                $('img.instagram-image').get(i).addClass(result.data[i].tags[0].substr(1));
             }
             console.log(i + ' -> ' + data[i]);
 
