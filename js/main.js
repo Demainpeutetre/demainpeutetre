@@ -17,7 +17,7 @@ var feed = new Instafeed({
         for(var i in result.data) {
 
             if (result.data[i].tags.length) {
-                $('img.instagram-image').get(i).addClass(result.data[i].tags[0].substr(1));
+                $('img.instagram-image')[i].addClass(result.data[i].tags[0].substr(1));
             }
             console.log(i + ' -> ' + data[i]);
 
