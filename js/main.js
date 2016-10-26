@@ -16,7 +16,7 @@ var feed = new Instafeed({
 });
 
 // bind the load more button
-$('#paginaion').click(function() {
+$('#pagination').click(function() {
 	feed.next();
 });
 
