@@ -183,10 +183,13 @@ ul li{
   -moz-animation-duration: 1.3s;
   -ms-animation-duration: 1.3s;
   -o-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+
   -webkit-animation-delay: 1.5s;
   -moz-animation-delay: 1.5s;
   -ms-animation-delay: 1.5s;
   -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 
 }
 
@@ -196,6 +199,7 @@ ul li{
   -moz-transition-duration: 0.7s;
   -ms-transition-duration: 0.7s;
   -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
 }
 
 #instagram img:hover{
@@ -204,6 +208,7 @@ ul li{
   -moz-transition-duration: 0.7s;
   -ms-transition-duration: 0.7s;
   -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
 }
 
 #instagram a{

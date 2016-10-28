@@ -13,7 +13,7 @@ function updateTags() {
     //click on tag
     $('#tags li').on("click", function () {
         var c = $(this).html();
-        $('#instagram img').each(function () {
+        $('#instagram a').each(function () {
             if (!$(this).hasClass(c)) {
                 $(this).hide();
             } else {
@@ -24,7 +24,7 @@ function updateTags() {
 
     //click on tag "all"
     $('#tags li.all').on("click", function () {
-        $('#instagram img').show();
+        $('#instagram a').show();
     });
 }
 
@@ -48,7 +48,7 @@ var feed = new Instafeed({
 			//set image classes with first tag
         for (var i in result.data) {
             if (result.data[i].tags.length) {
-                $('#instagram img').each(function (index) {
+                $('#instagram a').each(function (index) {
                     if (index == i) {
                         var tag = result.data[i].tags[0].substr(0);
                         if (tags.indexOf(tag) == -1) {
