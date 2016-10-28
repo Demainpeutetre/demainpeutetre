@@ -9,8 +9,8 @@ Est un site ou j'expose mes photographies
 - Squelette du site avec navbar, contenu et footer
 - Lightbox au clique sur les images
 - Pagination
+- Système de filtre par tag (bug à corriger)
 
 ###Futur contenu
 
-- Like et commentaires
-- <del>Système de filtre par tag</del> (L'API Instagram ne le permet pas)
+- Like et commentaire
