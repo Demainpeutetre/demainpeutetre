@@ -58,12 +58,13 @@ var feed = new Instafeed({
                 $('#instagram a').each(function (index) {
 
                   console.log('index: ' + index);
-                   console.log('call index: ' + call_index);
-                   console.log('test:' + (i + ((call_index - 1) * nb_image_par_call)));
+                    console.log('call index: ' + call_index);
+                    console.log('i:' + i);
+                    console.log('test:' + (i + (call_index - 1) * nb_image_par_call));
 
-                   if ((index == (i + ((call_index - 1) * nb_image_par_call)))) {
+                    if ((index == (i + (call_index - 1) * nb_image_par_call))) {
 
-                       console.log ('ok');
+                        console.log ('ok');
 
                         var tag = result.data[i].tags[0].substr(0);
                         if (tags.indexOf(tag) == -1) {
