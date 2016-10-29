@@ -14,17 +14,13 @@ function updateTags() {
     $('#tags li').on("click", function () {
         var c = $(this).html();
 
-        $('#instagram a').fadeOut(100);
-        $('#instagram a.' + c).fadeIn(100);
-
-
-        /*$('#instagram a').each(function () {
+        $('#instagram a').each(function () {
             if (!$(this).hasClass(c)) {
-                $(this).hide();
+                $(this).fadeOut();
             } else {
-                $(this).show();
+                $(this).fadeIn();
             }
-        });*/
+        });
     });
 
     //click on tag "all"
