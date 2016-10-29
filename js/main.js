@@ -13,13 +13,18 @@ function updateTags() {
     //click on tag
     $('#tags li').on("click", function () {
         var c = $(this).html();
-        $('#instagram a').each(function () {
+
+        $('#instagram a').fadeOut(100);
+        $('#instagram a.' + c).fadeIn(100);
+
+
+        /*$('#instagram a').each(function () {
             if (!$(this).hasClass(c)) {
                 $(this).hide();
             } else {
                 $(this).show();
             }
-        });
+        });*/
     });
 
     //click on tag "all"
@@ -56,39 +61,22 @@ var feed = new Instafeed({
         for (var i in result.data) {
             if (result.data[i].tags.length) {
 
+                //get first tag name
                 var tag = result.data[i].tags[0].substr(0);
+
+                //if tag doesn't exists in tags list, we add it
                 if (tags.indexOf(tag) == -1) {
                     tags.push(tag);
                 }
 
-                var index = i + ((call_index - 1) * nb_image_par_call);
+                //calc offset
+                var offset = (call_index - 1) * nb_image_par_call;
 
-                console.log('i:' + i);
-                console.log('index:' + index);
+                //define index
+                var index = parseInt(i) + parseInt(offset);
 
-                $('#instagram a')[index].addClass(tag);
-
-                /*$('#instagram a').each(function (index) {
-
-                    console.log('index: ' + index);
-                    console.log('call index: ' + call_index);
-                    console.log('i:' + i);
-                    console.log('test:' + (i + (call_index - 1) * nb_image_par_call));
-
-                    if ((index == (i + (call_index - 1) * nb_image_par_call))) {
-
-                        console.log ('ok');
-
-                        var tag = result.data[i].tags[0].substr(0);
-                        if (tags.indexOf(tag) == -1) {
-                            tags.push(tag);
-                        }
-                        $(this).addClass(tag);
-                    }
-
-                    console.log('----------------------------------');
-
-                });*/
+                //add class to image
+                $('#instagram a').eq(index).addClass(tag);
             }
         }
 
