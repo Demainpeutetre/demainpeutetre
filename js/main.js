@@ -29,16 +29,16 @@ function updateTags() {
 }
 
 //result buffer
-result = null;
+var result = null;
 
 //init tags list
-tags = [];
+var tags = [];
 
 //set nb of image per call
-nb_image_par_call = 12;
+var nb_image_par_call = 12;
 
 //set call index to 1 (because first call auton on init)
-call_index = 1;
+var call_index = 1;
 
 //init instafeed
 var feed = new Instafeed({
@@ -55,9 +55,22 @@ var feed = new Instafeed({
         //set image classes with first tag
         for (var i in result.data) {
             if (result.data[i].tags.length) {
-                $('#instagram a').each(function (index) {
 
-                  console.log('index: ' + index);
+                var tag = result.data[i].tags[0].substr(0);
+                if (tags.indexOf(tag) == -1) {
+                    tags.push(tag);
+                }
+
+                var index = i + ((call_index - 1) * nb_image_par_call);
+
+                console.log('i:' + i);
+                console.log('index:' + index);
+
+                $('#instagram a')[index].addClass(tag);
+
+                /*$('#instagram a').each(function (index) {
+
+                    console.log('index: ' + index);
                     console.log('call index: ' + call_index);
                     console.log('i:' + i);
                     console.log('test:' + (i + (call_index - 1) * nb_image_par_call));
@@ -75,7 +88,7 @@ var feed = new Instafeed({
 
                     console.log('----------------------------------');
 
-                });
+                });*/
             }
         }
 
