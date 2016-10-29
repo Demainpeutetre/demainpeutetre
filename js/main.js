@@ -55,15 +55,9 @@ var feed = new Instafeed({
 
         //set image classes with first tag
         for (var i in result.data) {
+
+            //if photo has tags
             if (result.data[i].tags.length) {
-
-                //get first tag name
-                var tag = result.data[i].tags[0].substr(0);
-
-                //if tag doesn't exists in tags list, we add it
-                if (tags.indexOf(tag) == -1) {
-                    tags.push(tag);
-                }
 
                 //calc offset
                 var offset = (call_index - 1) * nb_image_par_call;
@@ -71,8 +65,16 @@ var feed = new Instafeed({
                 //define index
                 var index = parseInt(i) + parseInt(offset);
 
-                //add class to image
-                $('#instagram a').eq(index).addClass(tag);
+                //loop on tags
+                for (var t in result.data[i].tags) {
+                    //if tag doesn't exists in tags list, we add it
+                    if (tags.indexOf(result.data[i].tags[t]) === -1) {
+                        tags.push(result.data[i].tags[t]);
+                    }
+
+                    //add tag as class to image
+                    $('#instagram a').eq(index).addClass(result.data[i].tags[t]);
+                }
             }
         }
 
