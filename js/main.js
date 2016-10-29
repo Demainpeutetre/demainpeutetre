@@ -61,7 +61,7 @@ var feed = new Instafeed({
                     console.log('call index: ' + call_index);
                     console.log('test:' + (index + ((call_index - 1) * nb_image_par_call)));
 
-                    if (index + ((call_index - 1) * nb_image_par_call)  == i) {
+                    if ((index + ((call_index - 1) * nb_image_par_call))  == i) {
 
                         console.log('ok');
 
