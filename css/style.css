@@ -176,7 +176,7 @@ nav#slide-menu {
 }
 nav#slide-menu > ul {
   display: block;
-  padding-top: 25vh;
+  padding-top: 20vh;
   margin-left: -1.5em;
   list-style: none;
   opacity: 0.5;
@@ -205,7 +205,7 @@ nav#slide-menu > ul li:before {
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  color: #59e9df;
+  color: black;
   margin-right: 12px;
   text-align: center;
   font-variant: normal;
@@ -245,21 +245,6 @@ body.menu-active nav#slide-menu ul {
 }
 
 /** MAIN **/
-
-.nav-tags{
-  text-align: center;
-}
-
-.nav-tags ul li{
-  padding: 0.5%;
-  text-transform: uppercase;
-  font-family: 'mont-serra-light', sans-serif;
-  font-weight: lighter;
-  font-size: 10px;
-  color: #686767;
-  cursor: pointer;
-  padding-left: 0px;
-}
 
 .nav-tags ul li:hover{
   text-decoration: underline;
@@ -472,18 +457,6 @@ body > div.fancybox-overlay.fancybox-overlay-fixed > div{
 
 /** MEDIA QUERIES **/
 
-@media screen and (max-width: 400px){
-  h1{
-    font-size: 26px;
-  }
-}
-
-@media screen and (max-width: 341px){
-  h1{
-    font-size: 23px;
-  }
-}
-
 @media screen and (max-width: 700px){
   body > div.fancybox-overlay.fancybox-overlay-fixed > div{
     left: 10px !important;
@@ -527,5 +500,17 @@ body > div.fancybox-overlay.fancybox-overlay-fixed > div{
 @media screen and (max-width: 967px){
   #tags{
     display: none;
+  }
+}
+
+@media screen and (max-width: 400px){
+  h1{
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 341px){
+  h1{
+    font-size: 23px;
   }
 }
